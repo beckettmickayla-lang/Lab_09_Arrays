@@ -8,6 +8,8 @@ public class Main {
         int[] dataPoints = new int[100];
         int sum = 0;
         int count = 0;
+        int min = dataPoints[0];
+        int max = dataPoints[0];
 
 
         for (int i = 0; i < dataPoints.length; i++) {
@@ -59,5 +61,16 @@ public class Main {
         } else {
             System.out.println("THe value " + targetValue + "was not found in the dataPoints array.");
         }
+
+        for (int i = 1; i < dataPoints.length; i++) {
+            if (dataPoints[i] < min) {
+                min = dataPoints[i];
+            }
+            if (dataPoints[i] > max) {
+                max = dataPoints[i];
+            }
+        }
+        System.out.println("The minimum value in the dataPoints array is: " + min);
+        System.out.println("The maximum value in the dataPoints array is: " + max);
     }
 }
