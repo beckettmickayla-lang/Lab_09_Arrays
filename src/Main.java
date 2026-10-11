@@ -30,5 +30,10 @@ public class Main {
 
         System.out.println("The sum of the random array dataPoints is: " + sum);
         System.out.printf("The average of the random array dataPoints is: %.2f%n", average);
+        System.out.println();
+
+        int userValue = SafeInput.getRangedInt(in, "Enter an integer to search for", 1, 100);
+
+        System.out.println("You entered: " + userValue);
     }
 }
