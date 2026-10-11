@@ -7,6 +7,7 @@ public class Main {
         Random rnd = new Random();
         int[] dataPoints = new int[100];
         int sum = 0;
+        int count = 0;
 
 
         for (int i = 0; i < dataPoints.length; i++) {
@@ -35,5 +36,12 @@ public class Main {
         int userValue = SafeInput.getRangedInt(in, "Enter an integer to search for", 1, 100);
 
         System.out.println("You entered: " + userValue);
+
+        for (int i = 0; i < dataPoints.length; i++) {
+            if (dataPoints[i] == userValue) {
+                count++;
+            }
+        }
+        System.out.println("The value " + userValue + " was found " + count + " time(s) in the dataPoints array.");
     }
 }
