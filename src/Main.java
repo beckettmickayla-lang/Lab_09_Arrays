@@ -7,5 +7,9 @@ public class Main {
         Random rnd = new Random();
         int[] dataPoints = new int[100];
 
+        for (int i = 0; i < dataPoints.length; i++) {
+            dataPoints[i] = rnd.nextInt(100) + 1;
+        }
+        System.out.println("The random array dataPoints has been created with a length of: " + dataPoints.length);
     }
 }
