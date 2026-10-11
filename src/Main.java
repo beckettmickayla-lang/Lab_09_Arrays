@@ -43,5 +43,21 @@ public class Main {
             }
         }
         System.out.println("The value " + userValue + " was found " + count + " time(s) in the dataPoints array.");
+        System.out.println();
+
+        int targetValue = SafeInput.getRangedInt(in, "Enter another integer to find its first position", 1, 100);
+        int foundIndex = -1;
+
+        for (int i = 0; i < dataPoints.length; i++) {
+            if (dataPoints[i] == targetValue) {
+                foundIndex = i;
+                break;
+            }
+        }
+        if (foundIndex != -1) {
+            System.out.println("The value " + targetValue + " was found at array index " + foundIndex);
+        } else {
+            System.out.println("THe value " + targetValue + "was not found in the dataPoints array.");
+        }
     }
 }
