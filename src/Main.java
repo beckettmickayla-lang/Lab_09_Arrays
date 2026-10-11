@@ -6,6 +6,8 @@ public class Main {
         Scanner in = new Scanner(System.in);
         Random rnd = new Random();
         int[] dataPoints = new int[100];
+        int sum = 0;
+
 
         for (int i = 0; i < dataPoints.length; i++) {
             dataPoints[i] = rnd.nextInt(100) + 1;
@@ -20,5 +22,13 @@ public class Main {
             }
         }
         System.out.println();
+
+        for (int i = 0; i < dataPoints.length; i++) {
+            sum += dataPoints[i];
+        }
+        double average = (double) sum / dataPoints.length;
+
+        System.out.println("The sum of the random array dataPoints is: " + sum);
+        System.out.printf("The average of the random array dataPoints is: %.2f%n", average);
     }
 }
